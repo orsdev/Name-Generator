@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>NAME GENERATOR</title>
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="heading">
+			<h3 class="text-center">NAME GENERATOR</h3>
+		</div>
+		<div class="app-container">
+			<form action="">
+				<div class="form-group">
+					<label for="country">Filter By Country</label>
+					<select name="country" class="form-control form-control-lg" id="country">
+						<option value="">--Select--</option>
+						<option value="Azerbaijan">Azerbaijan</option>
+						<option value="Nigeria">Nigeria</option>
+						<option hvalue="Colombia">Colombia</option>
+						<option value="France">France</option>
+						<option value="Mexico">Mexico</option>
+						<option value="England">England</option>
+						<option value="United States">United States</option>
+						<option value="India">India</option>
+						<option value="Japan">Japan</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="gender">Filter By Gender</label>
+					<select name="gender" class="form-control form-control-lg" id="gender">
+						<option value="">--Select--</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="number">Number of Names to Generate</label>
+					<input type="number" id="quantity" min="5" max="10" value="5">
+				</div>
+				<div class="form-group text-center">
+					<input type="submit" class="btn btn-lg btn-primary" value="Generate">
+				</div>
+				<div class="error-message">
+					<p>Fields can't be empty</p>
+				</div>
+
+			</form>
+			<div class="generated-names">
+			<div class="heading2 text-center text-light bg-dark p-1">
+				<h4>GENERATED NAMES</h4>
+			</div>
+				<div class="names-container">
+			
+			</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+<script src="js/app.js"></script>
+
+</html>

@@ -1,0 +1,39 @@
+body{
+	background-color: cadetblue;
+	
+}
+
+.container-fluid {
+	width: 90%;
+	margin-top: 50px;
+	background-color: aliceblue;
+	border-radius: 10px;
+	padding: 0;
+}
+
+
+.app-container {
+	display: flex;
+	flex-direction: row;
+	padding: .7rem;
+	background-image: linear-gradient(to right  , white 50%,aquamarine  50%);
+
+}
+
+form {
+	width: 90%;
+	margin-right: 10%;
+}
+
+.heading {
+	background-color:rebeccapurple;
+	color: white;
+	padding: .3rem 0;
+
+}
+
+
+
+.generated-names{
+	width: 90%
+}
