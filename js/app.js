@@ -32,7 +32,16 @@ function loadNames() {
 		url += `amount=${amount.value}`;
 
 
-	}
+	}else {
+		
+		//show error message
+		errorMessage.style.visibility = 'visible';
+		
+		//hide error message
+		setTimeout(function(){
+			errorMessage.style.visibility = 'hidden';
+		}, 1200)	
+	};
 
 }
 
