@@ -30,7 +30,9 @@ function loadNames() {
 
 		//add amount to link
 		url += `amount=${amount.value}`;
-
+     
+		//request api data
+		apiCall(url);
 
 	}else {
 		
@@ -45,5 +47,25 @@ function loadNames() {
 
 }
 
+function apiCall(url) {
+
+	var xhr = new XMLHttpRequest();
+
+	xhr.open('GET', url, true);
+
+	xhr.onload = function () {
+
+		if (this.status === 200) {
+
+			//parse array object
+			var parseArray = JSON.parse(this.responseText);
+
+		}
+
+	}
+
+	xhr.send();
+
+}
 
 
