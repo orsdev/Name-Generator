@@ -15,14 +15,13 @@ body{
 .app-container {
 	display: flex;
 	flex-direction: row;
-	padding: .7rem;
-	background-image: linear-gradient(to right  , white 50%,aquamarine  50%);
-
+	background-image: linear-gradient(to right  , white 50%, darkslategrey 50%);
 }
 
-form {
+.form {
 	width: 90%;
-	margin-right: 10%;
+	padding: .3rem;
+	
 }
 
 .heading {
@@ -32,8 +31,47 @@ form {
 
 }
 
+input[type="submit"] {
+	transition: all .2s ease;
+}
 
+input[type="submit"]:active {
+	transform: scale(1.1);
+}
+
+.error-message {
+	text-align: center;
+	font-size: 1.2rem;
+	visibility: hidden;
+}
 
 .generated-names{
-	width: 90%
+	width: 90%;
+}
+
+.heading2{
+  width: 100%;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: .5rem 0;
+	margin: 0;
+	
+}
+
+.names-container__box{
+	padding: .4rem;
+}
+
+.names-container__box p{
+	color: white;
+	font-size: 1.1rem;
+	background-color:crimson;
+	text-align: center;
+	display: block;
+	border-radius: 6px;
+	width: 100px;
+	margin: 6px auto;
+	padding: .2rem 0;
+	text-transform:uppercase;
 }
