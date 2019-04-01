@@ -30,22 +30,57 @@ function loadNames() {
 
 		//add amount to link
 		url += `amount=${amount.value}`;
-     
+
 		//request api data
 		apiCall(url);
 
-	}else {
-		
+	} else {
+
 		//show error message
 		errorMessage.style.visibility = 'visible';
-		
+
 		//hide error message
-		setTimeout(function(){
+		setTimeout(function () {
 			errorMessage.style.visibility = 'hidden';
-		}, 1200)	
+		}, 1200)
 	};
 
 }
+
+
+function printNames(apiData) {
+
+	//get div element from dom
+	const namesContainer = document.querySelector('.names-container');
+
+	//create div
+	const div = document.createElement('div');
+
+	//add class to div
+	div.classList.add('names-container__box');
+
+	apiData.forEach((data) => {
+
+		//create p element
+		const p = document.createElement('p');
+
+		p.textContent = data.name;
+
+		//add all created p's in div
+		div.appendChild(p);
+
+	});
+
+	//empty element if it have children elements
+	if (namesContainer.childNodes !== null) {
+		namesContainer.innerHTML = '';
+	}
+
+	//push div into namesContainer
+	namesContainer.appendChild(div);
+
+}
+
 
 function apiCall(url) {
 
@@ -59,7 +94,9 @@ function apiCall(url) {
 
 			//parse array object
 			var parseArray = JSON.parse(this.responseText);
-
+      
+			//print out names in browser
+			printNames(parseArray);
 		}
 
 	}
@@ -67,5 +104,3 @@ function apiCall(url) {
 	xhr.send();
 
 }
-
-
