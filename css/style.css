@@ -1,6 +1,6 @@
-body{
+body {
 	background-color: cadetblue;
-	
+
 }
 
 .container-fluid {
@@ -15,17 +15,17 @@ body{
 .app-container {
 	display: flex;
 	flex-direction: row;
-	background-image: linear-gradient(to right  , white 50%, darkslategrey 50%);
+	background-image: linear-gradient(to right, white 50%, darkslategrey 50%);
 }
 
 .form {
 	width: 90%;
 	padding: .3rem;
-	
+
 }
 
 .heading {
-	background-color:rebeccapurple;
+	background-color: rebeccapurple;
 	color: white;
 	padding: .3rem 0;
 
@@ -41,7 +41,8 @@ input[type="submit"]:active {
 
 input[type="number"] {
 	font-size: 1.2rem;
-	background-color: darkslategray;;
+	background-color: darkslategray;
+	;
 	color: white;
 	padding: 0 .3rem;
 	width: 60px;
@@ -53,52 +54,67 @@ input[type="number"] {
 	text-align: center;
 	font-size: 1.2rem;
 	visibility: hidden;
+	color: red;
+	font-weight: 500;
 }
 
-.generated-names{
+.generated-names {
 	width: 90%;
 }
 
-.heading2{
-  width: 100%;
+.heading2 {
+	width: 100%;
 	color: white;
 	background-color: black;
 	text-align: center;
 	padding: .5rem 0;
 	margin: 0;
-	
+
 }
 
-.names-container__box{
+.names-container__box {
 	padding: .4rem;
 }
 
-.names-container__box p{
+.names-container__box p {
 	color: white;
 	font-size: 1.1rem;
-	background-color:crimson;
+	background-color: crimson;
 	text-align: center;
 	display: block;
 	border-radius: 6px;
 	width: 150px;
 	margin: 6px auto;
 	padding: .2rem 0;
-	text-transform:uppercase;
+	text-transform: uppercase;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.app-container {
-	flex-direction: column;
+		flex-direction: column;
 		background-image: none;
-}
+	}
+
 	.container-fluid {
-	width: 90%;
-	
+		width: 90%;
+
+	}
+
+	.error-message {
+	margin-top: -10px;
+		font-weight: 600;
+		color: red;
 }
 	
-	.generated-names{
-	width: 100%;
-		margin-top: -50px;
-}
+	.generated-names {
+		width: 100%;
+		margin-top: -10px;
+	}
 	
+	.form {
+	margin: 0 auto;
+
+}
+
+
 }
