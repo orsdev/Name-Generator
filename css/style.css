@@ -85,3 +85,20 @@ input[type="number"] {
 	padding: .2rem 0;
 	text-transform:uppercase;
 }
+
+@media (max-width: 500px) {
+	.app-container {
+	flex-direction: column;
+		background-image: none;
+}
+	.container-fluid {
+	width: 90%;
+	
+}
+	
+	.generated-names{
+	width: 100%;
+		margin-top: -50px;
+}
+	
+}
